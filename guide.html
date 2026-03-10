@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Derivation Guide — Cue Vault</title>
+
+  <meta name="description" content="Step-by-step guide to manually derive your Cue Vault passwords with pen and paper.">
+  <link rel="canonical" href="https://carlosdanieltt.github.io/cue-pin-select-website/guide.html">
+  <meta name="theme-color" content="#0D0F14">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- === Nav === -->
+  <nav class="nav nav--scrolled" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav__brand">
+        <img src="favicon.png" alt="" width="28" height="28">
+        Cue Vault
+      </a>
+      <div class="nav__links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="guide.html">Guide</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://apps.apple.com/us/app/cue-pin-select/id1607859673" class="btn btn--accent">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- === Guide Content === -->
+  <main class="guide container">
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+
+    <h1 class="guide__title">Manual Derivation Guide</h1>
+    <p class="guide__intro">Lost your phone? No problem. You can reconstruct any password with pen and paper. Follow the 6 steps below using your PIN, passphrase, and the 4-letter cue for the service.</p>
+
+    <!-- Carousel -->
+    <div class="guide__carousel">
+      <div class="guide__track" id="guideTrack">
+
+        <div class="guide__slide" data-step="0">
+          <div class="guide__card">
+            <div class="guide__step-badge">Step 1</div>
+            <img src="guide/step1.png" alt="Step 1 diagram" class="guide__image">
+            <p class="guide__text">First, find the first occurrence in your passphrase of the first letter of the cue. Then, skip letters based on the first digit of the PIN. The next 3 letters become the first 3 letters of your password.</p>
+          </div>
+        </div>
+
+        <div class="guide__slide" data-step="1">
+          <div class="guide__card">
+            <div class="guide__step-badge">Step 2</div>
+            <img src="guide/step2.png" alt="Step 2 diagram" class="guide__image">
+            <p class="guide__text">Next, find the first occurrence of the second letter of your cue (starting after the 3 letters from part 1). Skip letters based on the second digit of your PIN. The next 3 letters are added to your password.</p>
+          </div>
+        </div>
+
+        <div class="guide__slide" data-step="2">
+          <div class="guide__card">
+            <div class="guide__step-badge">Step 3</div>
+            <img src="guide/step3.png" alt="Step 3 diagram" class="guide__image">
+            <p class="guide__text">Repeat for the third letter of the cue and third digit of the PIN. If the letter isn't in your passphrase, go to the next letter of the alphabet until you find one that is.</p>
+          </div>
+        </div>
+
+        <div class="guide__slide" data-step="3">
+          <div class="guide__card">
+            <div class="guide__step-badge">Step 4</div>
+            <img src="guide/step4.png" alt="Step 4 diagram" class="guide__image">
+            <p class="guide__text">Repeat for the fourth letter. Again, cycle through the alphabet if needed. The next 3 letters found are the last letters of your base password.</p>
+          </div>
+        </div>
+
+        <div class="guide__slide" data-step="4">
+          <div class="guide__card">
+            <div class="guide__step-badge">Step 5</div>
+            <img src="guide/step5.png" alt="Step 5 diagram" class="guide__image">
+            <p class="guide__text">Finally, capitalize letters 6 through 8, add '1a' after the letters, then add the special character for that cue to the end.</p>
+          </div>
+        </div>
+
+        <div class="guide__slide" data-step="5">
+          <div class="guide__card">
+            <div class="guide__step-badge">Step 6</div>
+            <img src="guide/step6.png" alt="Step 6 diagram" class="guide__image">
+            <p class="guide__text">If you need to adjust for length requirements, either remove letters from the back of the 12-letter piece until you hit the maximum, or keep adding 'a' at the end until you hit the minimum.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation -->
+      <div class="guide__nav">
+        <button class="guide__arrow guide__arrow--prev" id="guidePrev" aria-label="Previous step" disabled>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="guide__dots" id="guideDots">
+          <button class="guide__dot guide__dot--active" aria-label="Step 1"></button>
+          <button class="guide__dot" aria-label="Step 2"></button>
+          <button class="guide__dot" aria-label="Step 3"></button>
+          <button class="guide__dot" aria-label="Step 4"></button>
+          <button class="guide__dot" aria-label="Step 5"></button>
+          <button class="guide__dot" aria-label="Step 6"></button>
+        </div>
+        <button class="guide__arrow guide__arrow--next" id="guideNext" aria-label="Next step">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- === Footer === -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__brand">
+        <img src="favicon.png" alt="" width="24" height="24">
+        Cue Vault
+      </div>
+      <div class="footer__links">
+        <a href="privacy.html">Privacy</a>
+        <a href="https://apps.apple.com/us/app/cue-pin-select/id1607859673">App Store</a>
+      </div>
+      <p class="footer__copy">&copy; 2025 <a href="https://carlostrevino.dev">Carlos Trevino</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
